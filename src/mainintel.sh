@@ -80,6 +80,21 @@ while :; do
         brew install ruby
         echo "Installed"
     fi
+    if [ $REPLY == "14" ]; then
+        echo "installing rust";
+        brew install rust
+        echo "Installed"
+    fi
+    if [ $REPLY == "15" ]; then
+        echo "installing rust";
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        echo "Installed"
+    fi
+    if [ $REPLY == "16" ]; then
+        echo "installing tk python";
+        brew install python-tk@3.10
+        echo "Installed"
+    fi
     if [ $REPLY == "help" ]; then
         echo "(rb = requires homebrew)"
         echo "1-install command line tools for xcode"
@@ -95,5 +110,8 @@ while :; do
         echo "11-Deno (rb)"
         echo "12-Python (rb)"
         echo "13-Ruby (rb)"
+        echo "14-Rust (rb)"
+        echo "15-Rust using rustup"
+        echo "16-Install tk python (rb)"
     fi
 done
